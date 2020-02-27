@@ -12,6 +12,6 @@ nodeJs下批量获取签名或数据
 ### 运行
 npm i 
 
-node index.js 
+node index.js （为避免对别人的利益造成影响，就不开放了）
 
 

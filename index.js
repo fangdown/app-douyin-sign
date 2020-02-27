@@ -16,12 +16,13 @@ async function task(uid) {
   }
   const data = await getVideo(param)
   console.log('data', data);
+  return data
 }
 // 验证视频列表
 async function getVideo(param) {
   let options = {
     url: `https://www.iesdouyin.com/web/api/v2/aweme/post/?${querystring.stringify(param)}`,
-    headers: {//设置请求头
+    headers: {
       "user-agent": USERAGENT
     },
   }
@@ -32,7 +33,6 @@ async function getVideo(param) {
           console.log(err);
           return;
         }
-        // console.log(res)
         resolve(res.body.toString())
       })
     } catch (error) {

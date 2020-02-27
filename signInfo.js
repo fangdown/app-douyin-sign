@@ -179,6 +179,7 @@ const _bytedAcrawler = global.__M.require(
   'douyin_falcon:node_modules/byted-acrawler/dist/runtime'
 );
 
+// 生成签名
 const getSignature = async (uid) => {
   if (!uid) return {};
   const { tac, dytk } = await getTac(uid);
@@ -192,6 +193,7 @@ function decode(str) {
     return String.fromCharCode(parseInt($1, 16));
   });
 }
+
 /**
  * 获取官方网页代码
  * 获取tac和dytk代码
